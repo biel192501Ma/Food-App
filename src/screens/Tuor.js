@@ -3,10 +3,10 @@ import React, { useState, useRef } from "react";
 import Lottie from "lottie-react-native";
 import { Alert, Image } from "react-native";
 
-import { Box, Space, Title, Button } from "../css/global";
+import { Box, Space, Title, Button } from "../Css/global";
 
-import Delivery from "../assets/Delivery.png";
-import descont from "../assets/descont.png";
+import Delivery from "../Assets/Delivery.png";
+import descont from "../Assets/descont.png";
 
 const Tuor = ({ navigation }) => {
   const tuorData = [
@@ -66,17 +66,11 @@ const Tuor = ({ navigation }) => {
           <Image source={tuorData[actualTuor]?.pic} />
         )}
       </Box>
-      <Space size="0px" />
+      <Space size="150px" />
       <Button
         onPress={
           actualTuor == 2
-            ? () =>
-                Alert.alert("", "Login", [
-                  {
-                    text: "login",
-                    onPress: () => navigation.push("SignIn"),
-                  },
-                ])
+            ? () => navigation.push("SignIn")
             : () => setActualTuor(actualTuor + 1, console.log(actualTuor))
         }
         color={tuorData[actualTuor]?.btnbg}

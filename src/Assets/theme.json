@@ -4,6 +4,7 @@
         "white": "#fff",
         "dark": "#000",
         "violet": "#7B60C4",
-        "yellow" : "#FAFF00"
+        "yellow" : "#FAFF00",
+        "graydark": "#c4c4c4"
     }
 }

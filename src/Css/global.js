@@ -1,7 +1,7 @@
 import react from "react";
 
 import styled from "styled-components/native";
-import theme from "../assets/theme.json";
+import theme from "../Assets/theme.json";
 
 export const Box = styled.View`
   flex: ${({ fluid }) => (fluid ? 1 : "none")};
@@ -34,14 +34,18 @@ export const Title = styled.Text`
   margin-top: ${({ top }) => (top ? top + "%" : "0")};
   padding-left: ${({ paddingLeft }) => (paddingLeft ? paddingLeft + "%" : "0")};
   opacity: ${({ opacity }) => (opacity ? 0.5 : 1)};
+
 `;
 
 export const Input = styled.TextInput`
-  width: 100%;
+  width: 90%;
   height: 50px;
   background-color: ${({ color }) =>
-    color ? theme.Colors[color] : theme.Colors.graydark};
+    color ? theme.Colors[color] :"white"};
   border-radius: 5px;
+  border-Width: 1px;
+ border-Color: ${({ color }) =>
+    color ? theme.Colors[color] :theme.Colors.graydark};
   margin-top: ${({ top }) => (top ? top + "%" : "0")};
   margin-bottom: ${({ bottom }) => (bottom ? bottom + "%" : "0")};
   margin-left: ${({ left }) => (left ? left + "%" : "0")};
@@ -61,8 +65,8 @@ export const Button = styled.TouchableOpacity`
   margin-bottom: ${({ bottom }) => (bottom ? bottom + "%" : "0")};
   padding-top: ${({ paddingTop }) => (paddingTop ? paddingTop + "%" : "0")};
   padding-left: ${({ paddingLeft }) => (paddingLeft ? paddingLeft + "%" : "0")};
-  justify-content: ${({ justify }) => (justify ? justify : "flex-start")};
-  align-items: ${({ align }) => (align ? align : "flex-start")};
+  justify-content: ${({ justify }) => (justify ? justify : "center")};
+  align-items: ${({ align }) => (align ? align : "center")};
   border-radius: ${({ radius }) => (radius ? radius + "px" : "0")};
 `;
 

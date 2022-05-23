@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "../css/global";
+import { Box } from "../Css/global";
 const Home = () => {
   return <Box></Box>;
 };
