@@ -1,0 +1,100 @@
+{
+  "products": [
+    {
+      "category": [
+        {
+          "pizza": [
+            {
+              "id": 1,
+              "title": "Famila Pizza",
+              "subtitle": "Pizza, Burger",
+              "description": "Macarrão ao molho, acompanhado com carne suiça,mangericão e queijo ralado.",
+              "price": 19.5,
+              "total_price": 19.5,
+              "stock": 20
+            },
+            {
+              "id": 2,
+              "title": "Famila Pizza",
+              "subtitle": "Pizza, Burger",
+              "description": "Macarrão ao molho, acompanhado com carne suiça,mangericão e queijo ralado.",
+              "price": 19.5,
+              "total_price": 19.5,
+              "stock": 20
+            }
+          ]
+        },
+        {
+          "burger": [
+            {
+              "id": 1,
+              "title": "Famila Pizza",
+              "subtitle": "Pizza, Burger",
+              "description": "Macarrão ao molho, acompanhado com carne suiça,mangericão e queijo ralado.",
+              "price": 19.5,
+              "total_price": 19.5,
+              "stock": 20
+            },
+            {
+              "id": 2,
+              "title": "Famila Pizza",
+              "subtitle": "Pizza, Burger",
+              "description": "Macarrão ao molho, acompanhado com carne suiça,mangericão e queijo ralado.",
+              "price": 19.5,
+              "total_price": 19.5,
+              "stock": 20
+            }
+          ]
+        },
+        {
+          "several": [
+            {
+              "id": 1,
+              "title": "Famila Pizza",
+              "subtitle": "Pizza, Burger",
+              "description": "Macarrão ao molho, acompanhado com carne suiça,mangericão e queijo ralado.",
+              "price": 19.5,
+              "total_price": 19.5,
+              "stock": 20
+            },
+            {
+              "id": 2,
+              "title": "Famila Pizza",
+              "subtitle": "Pizza, Burger",
+              "description": "Macarrão ao molho, acompanhado com carne suiça,mangericão e queijo ralado.",
+              "price": 19.5,
+              "total_price": 19.5,
+              "stock": 20
+            }
+          ]
+        },
+        {
+          "promotions": [
+            {
+              "id": 1,
+              "title": "Famila Pizza",
+              "subtitle": "Pizza, Burger",
+              "description": "Macarrão ao molho, acompanhado com carne suiça,mangericão e queijo ralado.",
+              "price": 19.5,
+              "percentage": 5,
+              "total_promo": 18.52,
+              "stock": 20
+            }
+          ]
+        }
+      ],
+
+      "recommended": [
+        { "id": 1, "title": "PIZZA", "image": "" },
+        { "id": 2, "title": "PIZZA", "image": "" },
+        { "id": 3, "title": "PIZZA", "image": "" },
+        { "id": 4, "title": "PIZZA", "image": "" },
+        { "id": 5, "title": "PIZZA", "image": "" },
+        { "id": 6, "title": "PIZZA", "image": "" },
+        {
+          "description": " // maximo 6 item recomendados < cadastro de até 6 items "
+        }
+      ]
+    }
+  ]
+}
