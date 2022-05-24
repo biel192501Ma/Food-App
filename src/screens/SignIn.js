@@ -4,11 +4,12 @@ import { Box, Button, Space, Title } from "../Css/global";
 
 
 import ModalSingin from '../Components/Modals/ModalSingin'
+import ModalSingup from "../Components/Modals/ModalSingup";
 
 const SignIn = () => {
 
 const [modal, setModal]=useState(false)
-
+const [modalSingUp, setModalSingUp]=useState(false)
   return (
     <>
     <Box fluid color="primary" align="center">
@@ -22,12 +23,15 @@ const [modal, setModal]=useState(false)
          <Space size='20px' />
          <Button>
 
-         <Title color="white" bold size={25}>Registre-se</Title>
+         <Title onPress={()=>setModalSingUp(!modalSingUp , console.log(modalSingUp))} color="white" bold size={25}>Registre-se</Title>
          </Button>
       </Box>
     
     </Box>
+
+    {/*MOdais*/}
    <ModalSingin modalvisibilite={modal}/>
+   <ModalSingup ModalSingupVisibilite={modalSingUp} desativeModalsingUp={()=>setModalSingUp(!modalSingUp)} />
     </>
   );
 };

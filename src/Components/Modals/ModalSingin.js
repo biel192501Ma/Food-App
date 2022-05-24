@@ -31,9 +31,8 @@ const ModalSingin = ({modalvisibilite , navigation})=>{
                        <Space size={'30px'} />
                        <Box left={10} >
                       <Title
-                      onPress={()=> alert(' em construção :)')}
                         size={20} 
-                        > É novo aqui ? <Title color="primary" size={20} >  Registre-se</Title> </Title>
+                        > É novo aqui ? <Title  onPress={()=> alert(' em construção :)')} color="primary" size={20} >  Registre-se</Title> </Title>
 
                        </Box>
                     </Box>
