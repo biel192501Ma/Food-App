@@ -1,10 +1,14 @@
 import React, {useState} from "react";
-import { Box, Button, Space, Title } from "../Css/global";
+import { Box, Button, Space, Title } from "../css/global";
 
 
 
+<<<<<<< HEAD
 import ModalSingin from '../Components/Modals/ModalSingin'
 import ModalSingup from "../Components/Modals/ModalSingup";
+=======
+import ModalSingin from '../components/Modals/ModalSingin'
+>>>>>>> 81c60a2c42fbd7e424a21588d5723508f695ab32
 
 const SignIn = () => {
 

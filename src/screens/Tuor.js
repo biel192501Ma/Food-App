@@ -3,10 +3,10 @@ import React, { useState, useRef } from "react";
 import Lottie from "lottie-react-native";
 import { Alert, Image } from "react-native";
 
-import { Box, Space, Title, Button } from "../Css/global";
+import { Box, Space, Title, Button } from "../css/global";
 
-import Delivery from "../Assets/Delivery.png";
-import descont from "../Assets/descont.png";
+import Delivery from "../assets/Delivery.png";
+import descont from "../assets/descont.png";
 
 const Tuor = ({ navigation }) => {
   const tuorData = [
@@ -48,10 +48,10 @@ const Tuor = ({ navigation }) => {
       align="center"
     >
       <Box width={"90%"}>
-        <Title size={35} bold color={tuorData[actualTuor]?.textcolor}>
+        <Title size={30} bold color={tuorData[actualTuor]?.textcolor}>
           {tuorData[actualTuor]?.title}
         </Title>
-        <Space size="100px" />
+        {/* <Space size="100px" /> */}
         {actualTuor == 2 ? (
           <Lottie
             autoPlay
@@ -66,7 +66,7 @@ const Tuor = ({ navigation }) => {
           <Image source={tuorData[actualTuor]?.pic} />
         )}
       </Box>
-      <Space size="150px" />
+      {/* <Space size="150px" /> */}
       <Button
         onPress={
           actualTuor == 2
