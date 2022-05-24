@@ -1,0 +1,12 @@
+{
+  "colors": {
+    "primary": "#F3B335",
+    "white": "#fff",
+    "dark": "#000",
+    "violet": "#7B60C4",
+    "yellow": "#FAFF00",
+    "graydark": "#c4c4c4",// and default_validate
+    "error_validate": "#FD6060",
+    "initial_validate": "#F3B335"
+  }
+}
