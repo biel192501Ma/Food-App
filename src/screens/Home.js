@@ -1,7 +1,14 @@
 import React from "react";
-import { Box } from "../css/global";
+import { Box , Title } from "../Css/global";
 const Home = () => {
-  return <Box></Box>;
+  return(
+    <Box fluid justify="center" align="center" >
+  <Title>Home</Title>
+  </Box>
+    ) 
+    
+
+
 };
 
 export default Home;

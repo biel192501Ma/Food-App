@@ -3,13 +3,17 @@ import react from "react";
 import styled from "styled-components/native";
 import theme from "../util/theme.json";
 import fonts from "../util/fonts";
+
+
+
+
 export const Box = styled.View`
   flex: ${({ fluid }) => (fluid ? 1 : "none")};
   flex-direction: ${({ row }) => (row ? "row" : "column")};
   background-color: ${({ color }) => (color ? theme.colors[color] : "")};
   height: ${({ height }) => (height ? height : "auto")};
   width: ${({ width }) => (width ? width : "100%")};
-  padding: ${({ haspadding }) => (haspadding ? "10px  " : "0px")};
+  
   margin-left: ${({ left }) => (left ? left + "%" : "0")};
   margin-right: ${({ right }) => (right ? right + "%" : "0")};
   margin-top: ${({ top }) => (top ? top + "%" : "0")};
@@ -32,9 +36,11 @@ export const Title = styled.Text`
     bold ? "900" : regular ? "300" : "500"};
   color: ${({ color }) => (color ? theme.colors[color] : "#000")};
   margin-top: ${({ top }) => (top ? top + "%" : "0")};
+  margin-left: ${({ left }) => (left ? left + "%" : "0")};
+  padding-right: ${({ paddingRight }) => (paddingRight ? paddingRight + "%" : "0")};
   padding-left: ${({ paddingLeft }) => (paddingLeft ? paddingLeft + "%" : "0")};
   opacity: ${({ opacity }) => (opacity ? 0.5 : 1)};
-  font-family: ${fonts.primary};
+  font-family: ${({font}) => font ? font : fonts.primary};
 `;
 
 export const Input = styled.TextInput`
@@ -52,13 +58,15 @@ export const Input = styled.TextInput`
   color: ${({ textcolor }) =>
     textcolor ? theme.colors[textcolor] : theme.colors.dark};
   font-family: ${fonts.primary};
-`;
+  
+  `;
+  
 
 export const Button = styled.TouchableOpacity`
   background-color: ${({ color }) => (color ? theme.colors[color] : "")};
   height: ${({ height }) => (height ? height : "auto")};
   width: ${({ width }) => (width ? width : "100%")};
-
+  flex-direction: ${({ row }) => (row ? "row" : "column")};
   margin-left: ${({ left }) => (left ? left + "%" : "0")};
   margin-right: ${({ right }) => (right ? right + "%" : "0")};
   margin-top: ${({ top }) => (top ? top + "%" : "0")};

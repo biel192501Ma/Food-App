@@ -5,7 +5,7 @@
     "dark": "#000",
     "violet": "#7B60C4",
     "yellow": "#FAFF00",
-    "graydark": "#c4c4c4",// and default_validate
+    "graydark": "#c4c4c4", 
     "error_validate": "#FD6060",
     "initial_validate": "#F3B335"
   }

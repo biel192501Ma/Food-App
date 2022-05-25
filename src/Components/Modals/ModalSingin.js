@@ -6,7 +6,11 @@ import {
   Space,
   TextValidation,
   Title,
-} from "../../css/global";
+} from "../../Css/global";
+
+import { ScrollView} from 'react-native'
+
+import { useNavigation } from "@react-navigation/native";
 
 import Modal from "react-native-modal";
 
@@ -15,24 +19,34 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 import { Text } from "react-native";
 
+
+
+
+
+
+
+
+
 const schema = Yup.object({
   email: Yup.string().email("Email inválido").required("Email requerido"),
   password: Yup.string()
     .trim()
-    .min(8, "Minimo 6 caracteres")
+    .min(6, "Minimo 6 caracteres")
     .max(12, "Ops! sua senha não tem essa quantidade de caracteres!")
     .required("Senha obrigatória"),
 });
 
-const ModalSingin = ({ modalvisibilite, navigation, error, touched }) => {
-  function handleSignTeste() {
+const ModalSingin = ({ modalvisibilite,modalcontroler,  error, touched,ModalSingupVisibilite}) => {
+
+
+  function handleSignTeste(initialValues) {
     if (email === "teste@123.com" && password === "123456") {
-      navigation.push("Home");
+      navigation.navigate("Home");
     }
   }
 
 
-
+  const navigation = useNavigation()
   return (
     <Box>
       <Formik
@@ -70,6 +84,7 @@ const ModalSingin = ({ modalvisibilite, navigation, error, touched }) => {
                 {/*Form*/}
                 <Box left={6} aling="center">
                   <Input
+                  
                     placeholder="Email"
                     onChangeText={handleChange("email")}
                     onBlur={handleBlur("email")}
@@ -93,6 +108,7 @@ const ModalSingin = ({ modalvisibilite, navigation, error, touched }) => {
                     </TextValidation>
                   ) : null}
                   <Box left={32} top={2}>
+                  <Space size={"30px"} />
                     <Title onPress={() => alert(" em construção :)")} size={20}>
                       Esqueceu senha ?
                     </Title>
@@ -111,9 +127,9 @@ const ModalSingin = ({ modalvisibilite, navigation, error, touched }) => {
                   </Button>
                   <Space size={"30px"} />
                   <Box left={10}>
-                    <Title onPress={() => alert(" em construção :)")} size={20}>
+                    <Title  size={20}>
                       É novo aqui ?
-                      <Title color="primary" size={20}>
+                      <Title onPress={()=> {modalcontroler(false) ,ModalSingupVisibilite(true)}  } color="primary" size={20}>
                         Registre-se
                       </Title>
                     </Title>

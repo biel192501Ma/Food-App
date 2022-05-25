@@ -1,16 +1,14 @@
 import React, {useState} from "react";
-import { Box, Button, Space, Title } from "../css/global";
+import { Box, Button, Space, Title } from "../Css/global";
 
 
 
-<<<<<<< HEAD
+
 import ModalSingin from '../Components/Modals/ModalSingin'
 import ModalSingup from "../Components/Modals/ModalSingup";
-=======
-import ModalSingin from '../components/Modals/ModalSingin'
->>>>>>> 81c60a2c42fbd7e424a21588d5723508f695ab32
 
-const SignIn = () => {
+
+const SignIn = ({navigation}) => {
 
 const [modal, setModal]=useState(false)
 const [modalSingUp, setModalSingUp]=useState(false)
@@ -21,7 +19,7 @@ const [modalSingUp, setModalSingUp]=useState(false)
    
    <Space size='500px' />
       <Box align="center" >
-         <Button color="white" width={"90%"} height={"60px"} radius={5} onPress={()=>setModal(!modal , console.log(modal))}>
+         <Button color="white" width={"90%"} height={"60px"} radius={5} onPress={()=>setModal(true  ,console.log(modal))}>
            <Title bold size={25} >Login</Title>
          </Button>
          <Space size='20px' />
@@ -34,8 +32,8 @@ const [modalSingUp, setModalSingUp]=useState(false)
     </Box>
 
     {/*MOdais*/}
-   <ModalSingin modalvisibilite={modal}/>
-   <ModalSingup ModalSingupVisibilite={modalSingUp} desativeModalsingUp={()=>setModalSingUp(!modalSingUp)} />
+   <ModalSingin modalvisibilite={modal} modalcontroler={()=>setModal() } ModalSingupVisibilite={setModalSingUp} />
+   <ModalSingup ModalSingupVisibilite={modalSingUp} modalvisibilite={setModal} ModalsingUpControler={()=>setModalSingUp()} />
     </>
   );
 };
